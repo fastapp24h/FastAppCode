@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "SegnalaCondominio/app.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "SegnalaCondominio/api/$1.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "SegnalaCondominio/index.html"
+    }
+  ]
+}
